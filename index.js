@@ -24,6 +24,10 @@ let persons = [
         }
   ]
 
+app.get('/', (res, req) => {
+    res.send('<h1>HOLA INTERNET</h1>')
+})
+
 app.get('/persons', (req, res) => {
     res.send(persons)
 })
