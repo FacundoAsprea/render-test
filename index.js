@@ -47,8 +47,10 @@ app.post('/persons', (req, res) => {
 app.delete('/persons/:id', (req, res) => {
     let id = req.params.id
     let chosenPerson = persons.find(person => person.id === id)
+    console.log("OJO AL PIOJO")
     if(chosenPerson) {
         persons = persons.filter(person => person != chosenPerson)
+        console.log("PERO CLARO QE SI PAPAAA")
         res.end()
     }
     else {
