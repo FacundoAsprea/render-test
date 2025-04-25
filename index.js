@@ -26,6 +26,7 @@ let persons = [
 
 app.get('/', (res, req) => {
     console.log("AYUDA PORFAVORRRRRRR")
+    res.end()
 })
 
 app.get('/persons', (req, res) => {
