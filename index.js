@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3001
 let persons = [
         {
             id: "1",
-            name: "pepe",
+            name: "kkkkkkkkkkkk",
             number: "777"
         },
         {
@@ -19,17 +19,17 @@ let persons = [
         },
         {
             id: "3",
-            name: "mamaaaaa uuuuuuu",
+            name: "zzzzzzzzzzz",
             number: "8181"
         }
   ]
 
 app.get('/', (req, res) => {
-    console.log("AYUDA PORFAVORRRRRRR")
     res.end()
 })
 
 app.get('/persons', (req, res) => {
+    console.log("OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO")
     res.send(persons)
 })
 
@@ -47,10 +47,8 @@ app.post('/persons', (req, res) => {
 app.delete('/persons/:id', (req, res) => {
     let id = req.params.id
     let chosenPerson = persons.find(person => person.id === id)
-    console.log("OJO AL PIOJO")
     if(chosenPerson) {
         persons = persons.filter(person => person != chosenPerson)
-        console.log("PERO CLARO QE SI PAPAAA")
         res.end()
     }
     else {
@@ -59,4 +57,4 @@ app.delete('/persons/:id', (req, res) => {
 })
 
 
-app.listen(PORT, () => console.log(`Running on port ${PORT}`))
+app.listen(PORT, () => console.log(`Puerto: ${PORT}`))
