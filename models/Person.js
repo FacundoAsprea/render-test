@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const dotenv = require('dotenv').config()
 
-mongoURL = dotenv.parsed.MONGO_URL
+mongoURL = process.env.MONGODB_URL
 
 mongoose.connect(mongoURL)
 .then(() => console.log("Connected to MongoDB", mongoURL))
